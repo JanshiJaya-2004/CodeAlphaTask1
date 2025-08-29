@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Translator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h2> AI Translator</h2>
+
+    <textarea id="inputText" rows="5" placeholder="Enter text to translate..."></textarea>
+
+    <div class="row">
+      <div class="col">
+        <label for="sourceLang">From</label>
+        <select id="sourceLang">
+          <option value="auto">Auto Detect</option>
+          <option value="en">English</option>
+          <option value="hi">Hindi</option>
+          <option value="es">Spanish</option>
+          <option value="fr">French</option>
+          <option value="de">German</option>
+          <option value="ta">Tamil</option>
+          <option value="te">Telugu</option>
+          <option value="bn">Bengali</option>
+          <option value="mr">Marathi</option>
+        </select>
+      </div>
+      <div class="col">
+        <label for="targetLang">To</label>
+        <select id="targetLang">
+          <option value="en">English</option>
+          <option value="hi">Hindi</option>
+          <option value="es">Spanish</option>
+          <option value="fr">French</option>
+          <option value="de">German</option>
+          <option value="ta">Tamil</option>
+          <option value="te">Telugu</option>
+          <option value="bn">Bengali</option>
+          <option value="mr">Marathi</option>
+        </select>
+      </div>
+    </div>
+
+    <button id="translateBtn">Translate</button>
+
+    <div class="output" id="outputText" aria-live="polite">Translated text will appear here...</div>
+
+    <div class="actions">
+      <button id="copyBtn"> Copy</button>
+      <button id="speakBtn">Speak</button>
+      <button id="swapBtn" title="Swap languages">⇄ Swap</button>
+    </div>
+
+    <p class="hint">
+      Using <span id="engineName">LibreTranslate</span>. You can switch to Microsoft Translator by editing <code>app.js</code>.
+    </p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
